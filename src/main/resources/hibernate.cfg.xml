@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="hbm2ddl.auto">create</property>
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/project_po</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">Pudge</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="show_sql">true</property>
+
+        <mapping class="ru.hibernate.project_po.entity.Person"/>
+        <mapping class="ru.hibernate.project_po.entity.RecordBook"/>
+        <mapping class="ru.hibernate.project_po.entity.Student"/>
+    </session-factory>
+</hibernate-configuration>
