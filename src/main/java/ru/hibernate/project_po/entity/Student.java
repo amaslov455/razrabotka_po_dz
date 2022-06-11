@@ -2,6 +2,7 @@ package ru.hibernate.project_po.entity;
 
 import jakarta.persistence.*;
 
+@EntityListeners(StudentListener.class)
 @Entity
 @Table(name = "student")
 public class Student {

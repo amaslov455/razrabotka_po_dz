@@ -74,6 +74,12 @@ public class MainApp {
         System.out.println("Выбор студентов без зачетной книжки (Criteria)");
         studentDAO.selectByRBbyCriteriaStudentsWithoutRB().forEach(System.out::println);
 
+        // Пункт 5.6 дз
+        entityManager.getTransaction().begin();
+        System.out.println("Удаление всех студентов");
+        studentDAO.findAll().forEach(studentDAO::delete);
+        entityManager.getTransaction().commit();
+
         entityManager.close();
     }
 }
